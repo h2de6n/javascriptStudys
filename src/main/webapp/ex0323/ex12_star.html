@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+<script>
+    // prompt에서 숫자를 입력 받는다.
+    function star() {
+        let num = parseInt(prompt('별의 개수를 입력?'));
+
+        // 입력한 숫자 만큼 행과 열이 만들어져 역삼각형 별 모양을 출력한다.
+
+        for (let k = 0; k < num; k++) {
+            for (let i = 0; i < k; i++) {
+                document.write(`⚪️`);
+            }
+            for (let j = 0; j < num - k; j++) {
+                document.write(`️⚫`);
+            }
+            document.write(`<br>`);
+
+        }
+
+
+    }
+
+    star();
+
+</script>
+</body>
+</html>

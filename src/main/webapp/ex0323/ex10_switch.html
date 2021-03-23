@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+       // 연산하기 함수 만들기
+       function cal() {
+           // 3개의 prompt 받는다.
+           let num1 = parseInt(prompt("숫자1?"));
+           let num2 = parseInt(prompt("숫자2?"));
+           let oper = prompt("연산기호(+,-,*,/)?");
+
+           let result = 0;
+           // 1. 숫자가 2개가 숫자인지 아닌지 판단한다. - 아니면 다시할래? 묻는다. isNaN() : is Not a Number
+
+           if (isNaN(num1) || isNaN(num2)) {
+               let again = confirm("다시할래?");
+               if (again)cal();
+               else return;
+           }
+
+           // 2. 연산기호가 +,-,*,/ 아니면 다시할래? 묻는다.
+           switch (oper) {
+               case '+':
+                   result = num1 + num2;
+                   break;
+               case '-':
+                   result = num1 - num2;
+                   break;
+               case '*':
+                   result = num1 * num2;
+                   break;
+               case '/':
+                   result = num1 / num2;
+                   break;
+               default:
+                   let operAgain = confirm("다시할래?");
+                   if (operAgain) cal();
+                   else return;
+           }
+
+           // 3. 모든게 정상이면 연산기호에 따라 연산해서 그 결과를 출력한다.
+
+           document.write(result);
+       }
+   </script>
+</head>
+<body>
+<button type="button" onclick="cal()">연산하기</button>
+
+</body>
+</html>

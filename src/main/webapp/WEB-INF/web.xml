@@ -10,6 +10,9 @@
 <!--        <welcome-file>/ex0323/ex06_operator.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex07_function.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex08_functionExam.html</welcome-file>-->
-        <welcome-file>/ex0323/ex09_ifExam.html</welcome-file>
+<!--        <welcome-file>/ex0323/ex09_ifExam.html</welcome-file>-->
+<!--        <welcome-file>/ex0323/ex10_switch.html</welcome-file>-->
+<!--        <welcome-file>/ex0323/ex11_forGuguDan.html</welcome-file>-->
+        <welcome-file>/ex0323/ex12_star.html</welcome-file>
     </welcome-file-list>
 </web-app>
