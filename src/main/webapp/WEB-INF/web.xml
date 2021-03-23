@@ -6,6 +6,7 @@
     <welcome-file-list>
 <!--        <welcome-file>/ex0323/ex03_way.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex04_variable.html</welcome-file>-->
-        <welcome-file>/ex0323/ex05_variable_let.html</welcome-file>
+<!--        <welcome-file>/ex0323/ex05_variable_let.html</welcome-file>-->
+        <welcome-file>/ex0323/ex06_operator.html</welcome-file>
     </welcome-file-list>
 </web-app>

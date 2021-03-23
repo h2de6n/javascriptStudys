@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+
+<body>
+<h1> 연산자의 종류!! </h1>
+<script>
+   //변수 선언
+   let i = 10;
+   let j = "10";
+
+   document.write("<h3>");
+   document.write("i = " + i + ", type = " + (typeof i) + "<br>");
+
+   // ES6에 추가된 문법 : 템플릿 문자열 ()
+   document.write(`j = ${j}, type = ${typeof j}<hr>`);
+
+
+   // 산술연산자
+   document.write(`i==j ==> ${i == j}<br>`);   // 값만 비교
+   document.write(`i===j ==> ${i === j}<hr>`);  // 값과 type 모두 비교
+
+   // === 등호 3개로 비교 하고 싶을때 형변환을 이용해서 비교할 수 있다.
+   // 형변환 : Number(), parseInt(), parseFloat()
+   document.write(`i===Number(j) ==> ${i === Number(j)}<br>`);
+   document.write(`i===parseInt(j) ==> ${i === parseInt(j)}<hr>`);
+
+   // Number() 와 parseInt() 차이
+   let data = "a100";
+   document.write(`data = ${data} type = ${typeof data}<br>`);
+   document.write(`data = ${Number(data)} type = ${typeof Number(data)}<br>`);      // NaN(Not a Number)
+   document.write(`data = ${parseInt(data)} type = ${typeof parseInt(data)}<hr>`);  // NaN(Not a Number)
+
+   // parseInt() 숫자 뒤에 문자가 있으면 문자를 버려버리고 숫자만 출력해서 100이라는 결과가 떴다.
+   data = "100a";
+   document.write(`data = ${data} type = ${typeof data}<br>`);
+   document.write(`data = ${Number(data)} type = ${typeof Number(data)}<br>`);      // NaN(Not a Number)
+   document.write(`data = ${parseInt(data)} type = ${typeof parseInt(data)}<hr>`);  // 100, Number
+
+   // let a = 5, b = "10";
+   let a = 5, b = 2;
+   document.write(`a + b = ${a + b}<br>`);
+   document.write(`a - b = ${a - b}<br>`);
+   document.write(`a * b = ${a * b}<br>`);
+   document.write(`a / b = ${a / b}<br>`);
+   document.write(`a % b = ${a % b}<br>`);
+
+   document.write(`a *= b = ${a *= b}<br>`);
+   document.write(`a = ${a}<br>`);
+   document.write(`b = ${b}<hr>`);
+
+   document.write("</h3>");
+</script>
+
+</body>
+</html>
