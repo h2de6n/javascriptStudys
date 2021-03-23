@@ -3,8 +3,109 @@
 <head>
    <meta charset="UTF-8">
    <title>Title</title>
+   <link rel="stylesheet" href="../css/ex09_ifExam.css">
 </head>
 <body>
+<script>
+    // prompt를 4개
+    // 총점구하기
+    // 평균구하기
+    // 등급구하기 (90~100은 수, 80 ~ 89 우, 70 ~ 79 미 60 ~ 69 양 60미만은 가)
+    /* 어떻게 테이블에 출력할까??
+          2가지 방법
+             1) script 영역에서 table을 출력한다.
+             2) html 영역에서 테이블을 만들고 출력해야하는 변수만 script에 출력한다.
+     */
+    let name = prompt('이름은?', '김승원');
+    let kor = Number(prompt('국어점수는? ', 80));
+    let eng = parseInt(prompt('영어점수는? ', 100));
+    let math = parseInt(prompt('수학점수는? ', 90));
 
+
+    let total = math + kor + eng;
+
+    let avg = total / 3;
+
+
+    let grade = '가';
+    if (avg >= 90) grade = '수';
+    else if (avg >= 80) grade = '우';
+    else if (avg >= 70) grade = '미';
+    else if (avg >= 60) grade = '양';
+    else grade = '가';
+
+    document.write(`
+         <table>
+         <caption><h3>성적표</h3></caption>
+            <tr>
+               <th>이름</th>
+               <th>국어</th>
+               <th>영어</th>
+               <th>수학</th>
+               <th>총점</th>
+               <th>평균</th>
+               <th>등급</th>
+            </tr>
+            <tr>
+               <td>${name}</td>
+               <td>${kor}</td>
+               <td>${eng}</td>
+               <td>${math}</td>
+               <td>${total}</td>
+               <td>${avg}</td>
+               <td>${grade}</td>
+            </tr>
+         </table>
+    `)
+</script>
+<hr>
+<!-- 2) html 영역에서 테이블을 만들고 출력해야하는 변수만 script에 출력한다. -->
+
+<table>
+   <tr>
+      <th>이름</th>
+      <th>국어</th>
+      <th>영어</th>
+      <th>수학</th>
+      <th>총점</th>
+      <th>평균</th>
+      <th>등급</th>
+   </tr>
+   <td>
+      <script>
+         document.write(name);
+      </script>
+   </td>
+   <td>
+      <script>
+          document.write(kor);
+      </script>
+   </td>
+   <td>
+      <script>
+          document.write(eng);
+      </script>
+   </td>
+   <td>
+      <script>
+          document.write(math);
+      </script>
+   </td>
+   <td>
+      <script>
+          document.write(total);
+      </script>
+   </td>
+   <td>
+      <script>
+          document.write(avg);
+      </script>
+   </td>
+   <td>
+      <script>
+          document.write(grade);
+      </script>
+   </td>
+</table>
 </body>
 </html>

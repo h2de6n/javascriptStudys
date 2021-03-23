@@ -9,6 +9,7 @@
 <!--        <welcome-file>/ex0323/ex05_variable_let.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex06_operator.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex07_function.html</welcome-file>-->
-        <welcome-file>/ex0323/ex08_functionExam.html</welcome-file>
+<!--        <welcome-file>/ex0323/ex08_functionExam.html</welcome-file>-->
+        <welcome-file>/ex0323/ex09_ifExam.html</welcome-file>
     </welcome-file-list>
 </web-app>
