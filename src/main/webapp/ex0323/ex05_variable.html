@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+      document.write('<h1>변수 선언방법(var, let, const)</h1>');
+
+      // 변수선언(script 내부에 선언된 변수는 전역변수)
+      var a;
+      var b = 10;
+      var c = '승원';
+      d = 3.14;  // var 키워드 생략가능(전역변수 선언)
+
+      // 브라우저에 출력
+      document.write('<h3>');
+      document.write('a = ' + a + ", " + (typeof a) + "<br>");
+      document.write('b = ' + b + ", " + (typeof b) + "<br>");
+      document.write('c = ' + c + ", " + (typeof c) + "<br>");
+      document.write('d = ' + d + ", " + (typeof d) + "<hr>");
+
+
+      // 값변경
+      a = new String("배고프다");
+      b = "뭐먹지?";
+      c = 100;
+      d = new Array(5);
+      d = ["A", 10, "b", 5.5];
+
+      document.write('a = ' + a + ", " + (typeof a) + "<br>");
+      document.write('b = ' + b + ", " + (typeof b) + "<br>");
+      document.write('c = ' + c + ", " + (typeof c) + "<br>");
+      document.write('d = ' + d + ", " + (typeof d) + "<hr>");
+
+      // 동일한 이름의 변수를 또 선언할 수 있다.
+      var a = "동일한 이름이네~~~";
+      document.write("a = " + a + " , " + (typeof a) + "<br>");
+
+      // 아직 선언되지 않은 변수 미리 출력하기
+      document.write("addr = " + addr);
+
+      var addr;
+
+
+      // 호이스팅개념이 있어서 html문서를 로딩할때 메모리에 변수나 함수를 미리 할당한다.(값 후에 할당한다...)
+      var addr='서울';
+
+      // 함수선언 (함수안에 선언된 변수는 함수내에서만 사용가능하다. 단 var키워드를 생략하면 전역변수가 된다!!!!)
+      function test() {
+         var a = 50;
+         var addr="오리역";
+         age = 20;   // var 생략했으므로 함수 호출후 부터는 전역변수가 된다.
+         var phone = "1111";
+
+         document.write("<hr>");
+         document.write("지역변수 알아보기 ----------<br>")
+         // 지역변수와 전역변수의 이름이 같을 경우 this.을 사용하면 전역변수를 호출한다.
+         document.write("a = " + a + " , " + (typeof a) + "<br>");
+         document.write("this.a = " + this.a + " , " + (typeof this.a) + "<br>");
+         document.write("<hr>");
+
+         document.write("addr = " + addr + " , " + (typeof addr) + "<br>");
+         document.write("this.addr = " + this.addr + " , " + (typeof this.addr) + "<br>");
+         document.write("<hr>");
+
+         document.write("age = " + age + " , " + (typeof age) + "<br>");
+         document.write("phone = " + phone + " , " + (typeof phone) + "<br>");
+      }
+
+      // 함수를 호출해본다.
+      test();
+
+      // 함수 호출후에 함수안에 선언된 변수를 호출해본다..
+      document.write("<hr>age = " + age + " , " + (typeof age) + "<br>");
+      document.write("phone = " + phone + " , " + (typeof phone) + "<br>");
+      document.write('</h3>');
+   </script>
+</head>
+<body>
+
+</body>
+</html>
