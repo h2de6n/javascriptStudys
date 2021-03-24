@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+
+       let f;
+
+       function toDayLoading() {
+           f = document.form;
+           // 현재 날짜를 뒤에 있는 text에 넣는다.
+           let today = new Date();
+           f.ey.value = today.getFullYear();
+           f.em.value = today.getMonth() + 1;
+           f.ed.value = today.getDate();
+       }
+
+       function cal() {
+           // text 박스 6개의 값이 모두 있는지 체크하기.
+
+           // if (!textValidate(f.sy) || !textValidate(f.sm) || !textValidate(f.sd) ||
+           //     !textValidate(f.ey) || !textValidate(f.em) || !textValidate(f.ed)) {
+           //     return;  // 현재 함수를 빠져나간다.
+           // }
+
+           let tList = [f.sy, f.sm, f.sd, f.ey, f.em, f.ed];
+           for(let i in tList) {
+               console.log(i);
+               if(!textValidate(tList[i])) return;
+           }
+
+           // 날짜 만들기
+           let sday = new Date(f.sy.value, f.sm.value-1, f.sd.value);
+           let eday = new Date(f.ey.value, f.em.value-1, f.ed.value);
+
+           let days = (eday - sday)/1000/60/60/24;
+           alert("두 날짜의 gap은 " + days + "일 입니다.");
+       }
+
+       // text박스의 유효성 체크하는 함수
+       // 이 함수의 리턴값은 false이면 잘못됨, true이면 정상
+       function textValidate(textEle) {
+           // alert(textEle);
+           // 값 있는지?
+           if (textEle.value == "") {
+               alert("값을 입력해주세요.");
+               textEle.focus();
+               return false;
+           }
+           // 있으면 숫자인지...
+           if (isNaN(textEle.value)) {
+               alert("숫자만 입력하세요.");
+               textEle.value = "";
+               textEle.focus();
+               return false;
+           }
+
+           // 틀리면, 지우고 커서놓기....
+           return true
+       }
+   </script>
+</head>
+<body onload="toDayLoading()">
+<h1>날짜 계산하기</h1>
+<form name="form">
+
+   <input type="text" size="4" name="sy"/> -
+   <input type="text" size="2" name="sm"/> -
+   <input type="text" size="2" name="sd"/> ~
+
+   <input type="text" size="4" name="ey"/> -
+   <input type="text" size="2" name="em"/> -
+   <input type="text" size="2" name="ed"/>
+
+   <input type="button" value="계산하기" onclick="cal()">
+
+</form>
+
+</body>
+</html>

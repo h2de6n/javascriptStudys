@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+<h1> Date 객체 </h1>
+<h3>
+   <script>
+       let today = new Date(2021, 7, 4, 15, 20, 30);
+       document.write("today = " + today + "<hr>");
+
+       document.write("today.getFullYear() = " + today.getFullYear() + "<br>");
+       document.write("today.getMonth() = " + today.getMonth() + "<br>");  // 0이 1월 ~ 11이 12월
+       document.write("today.getDate() = " + today.getDate() + "<hr>");
+
+       // 요일 구하기(요일은 숫자로 나온다. - 0=일, 1=월, 2=화 .... 6=토);
+       document.write("today.getDay() = " + today.getDay() + "<hr>");
+
+       // 나온 요일을 문자로 변경해서 출력.
+       let day = ["일", "월", "화", "수", "목", "금", "토"];
+       document.write("요일구하기 = " + day[today.getDay()] + "요일<hr>");
+
+
+       document.write("today.getHours() = " + today.getHours() + "<br>");
+       document.write("today.getMinutes() = " + today.getMinutes() + "<br>");
+       document.write("today.getSeconds() = " + today.getSeconds() + "<hr>");
+
+       // 날짜를 변경해본다. setXx(값)
+       today.setMonth(5);  // 6월
+       today.setDate(20);  // 20일
+
+       document.write("today.toLocaleString() = " + today.toLocaleString() + "<br>");
+
+   </script>
+</h3>
+</body>
+</html>

@@ -20,6 +20,9 @@
 <!--        <welcome-file>/ex0324/ex04_backColorChange.html</welcome-file>-->
 <!--        <welcome-file>/ex0324/ex05_textAccess.html</welcome-file>-->
 <!--        <welcome-file>/ex0324/ex06_textMove.html</welcome-file>-->
-        <welcome-file>/ex0324/ex07_textMove_setInterval.html</welcome-file>
+<!--        <welcome-file>/ex0324/ex07_textMove_setInterval.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex08_Date.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex09_DateGap.html</welcome-file>-->
+        <welcome-file>/ex0324/ex10_Timer.html</welcome-file>
     </welcome-file-list>
 </web-app>
