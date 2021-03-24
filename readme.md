@@ -1,11 +1,57 @@
-<h2>자바스크립트를 공부하기 위한 프로젝트입니다.</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+       /*
+          시작을 클릭하면
+          현재 시, 분, 초를 구한다.
 
-<h3>ex10 예제</h3>
-<script src="../javascriptStudys/src/main/webapp/js/readme.js">
-</script>
-<form>
+          시를 기준으로 AM, PM으로 구분한다.
+
+          // 시, 분, 초가 한자리인지를 체크해서 1자리이면 앞에 0을 붙혀서 2자리로 출력한다.
+          // 구한 시분초를 text박스에 넣는다. -> 1초마다 반복한다.
+        */
+
+
+       function startTimer() {
+
+           let today = new Date();
+
+           let amPm = (today.getHours() > 12) ? "PM" : "AM";
+           let hours = ((today.getHours() % 12) < 10) ? `0${today.getHours()}` : today.getHours();
+           let min = (today.getMinutes() < 10) ? `0${today.getMinutes()}` : today.getMinutes();
+           let sec = (today.getSeconds() < 10) ? `0${today.getSeconds()}` : today.getSeconds();
+
+           // console.log(amPm);
+           // console.log(hours);
+           // console.log(min);
+           // console.log(sec);
+
+           let times = `${amPm} ${hours} : ${min} : ${sec}`;
+           document.getElementById("time").value = times;
+
+       }
+
+
+       function init() {
+           startTimer();
+           setInterval(startTimer, 1000);
+       }
+
+
+       /*
+          중지를 클릭하면 멈춘다.
+        */
+   </script>
+</head>
+<body>
+<form name="form">
    <input type="text" id="time">
    <input type="button" value="시작" onclick="init()">
    <input type="button" value="중지">
 </form>
-<hr>
+</body>
+</html>
+
