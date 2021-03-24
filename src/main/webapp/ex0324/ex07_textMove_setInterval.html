@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <style>
+      input {
+         font-size: 25px;
+         border: double red 3px;
+      }
+
+      input[type=text] {
+         width: 400px;
+      }
+   </style>
+   <script>
+       // 배열에 문자를 준비한다.
+       let data = ["이", "제", "쉬", "는", "시", "간", "입", "니", "다", "."];
+       let index = 0;
+
+       function textMove() {
+           // 1초마다 배열에 값을 순차적으로 text 넣는다.
+           document.f.text.value += data[index++];
+
+           // 마지막 글자가 되면 그만한다.
+           if (index == data.length) {
+               index = 0;  // 초기화
+               clearInterval(st);
+           }
+           // 다시 버튼을 클릭하면 처음부터 또 시작한다.
+       }
+
+       let st;
+
+       function textStart() {
+           if (index == 0) {
+               document.f.text.value = "";
+               st = setInterval(textMove, 1000);
+           } else {
+               alert("안돼");
+           }
+       }
+   </script>
+</head>
+<body>
+<form name="f">
+   <input type="text" name="text">
+   <input type="button" value="시작" onclick="textStart()">
+</form>
+</body>
+</html>

@@ -14,6 +14,12 @@
 <!--        <welcome-file>/ex0323/ex10_switch.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex11_forGuguDan.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex12_star.html</welcome-file>-->
-        <welcome-file>/ex0324/ex01_MathArray.html</welcome-file>
+<!--        <welcome-file>/ex0324/ex01_MathArray.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex02_backColor.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex03_timing.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex04_backColorChange.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex05_textAccess.html</welcome-file>-->
+<!--        <welcome-file>/ex0324/ex06_textMove.html</welcome-file>-->
+        <welcome-file>/ex0324/ex07_textMove_setInterval.html</welcome-file>
     </welcome-file-list>
 </web-app>
