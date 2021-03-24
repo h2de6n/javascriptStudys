@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+      let i=0;
+      function test() {
+          console.log(i++);
+
+          // setTimeout("test()", 100);   //0.1초
+          // setTimeout(test, 1000);   //0.1초(딱, 한번만 함수를 실행하기 때문에 반복하려면 재귀호출을 사용한다.)
+      }
+   </script>
+</head>
+<!--<body onload="test()">-->
+<body onload="setInterval(test, 1000)">
+</body>
+</html>
