@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+       function backColor() {
+           // 1. 색상을 배열로 준비한다.
+           let arrColor = ["red", "green", "blue", "skyblue", "pink"];
+           // 2. 난수를 색사으이 개수만큼 발생한다.
+           let index = Math.floor(Math.random() * arrColor.length);
+           console.log("index = " + index);
+           // 3. 발생된 난수에 해당하는 색상으로 바탕색을 변경한다. - document.body.style.backgroundColor=색상
+           document.body.style.backgroundColor = arrColor[index];
+       }
+   </script>
+</head>
+<!-- onload는 body에 있는 엘리먼트가 로딩이 된 후에 뭔가 일을 하라는 것이다. -->
+<body onload="backColor()">
+
+</body>
+</html>
