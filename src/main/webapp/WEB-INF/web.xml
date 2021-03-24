@@ -13,6 +13,7 @@
 <!--        <welcome-file>/ex0323/ex09_ifExam.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex10_switch.html</welcome-file>-->
 <!--        <welcome-file>/ex0323/ex11_forGuguDan.html</welcome-file>-->
-        <welcome-file>/ex0323/ex12_star.html</welcome-file>
+<!--        <welcome-file>/ex0323/ex12_star.html</welcome-file>-->
+        <welcome-file>/ex0324/ex01_MathArray.html</welcome-file>
     </welcome-file-list>
 </web-app>
