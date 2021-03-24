@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <style>
+      div {
+         width: 200px;
+         height: 200px;
+         border: 2px red solid;
+         overflow: auto;
+      }
+   </style>
+   <script>
+       function textMove() {
+           // 1. input 요소의 값을 가져오기
+           let inputEle = window.document.f.input
+           // inputEle 이용해서 inputEle.속성 또는 inputEle.메소드이름()
+
+           // alert(inputEle.value);
+
+           // 2. 가져온 값이 없으면 "입력하세요" 메시지 출력하고 커서 놓기
+
+           if (inputEle.value == "") {
+               alert("입력 부분에 값을 넣어주세요.");
+               inputEle.focus();  // 커서놓기
+               return;   // 함수를 빠져나가라.
+           }
+
+
+           // 가져온값을 출력에 넣는다.
+           document.f.output.value = inputEle.value;
+
+           ///////////////////////////////////
+           // div영역에 input 상자의 내용을 넣기(누적하면서...)
+           let divEle = document.getElementById("div");
+           divEle.innerHTML += inputEle.value + "<br>";    // divEle.innerHTML = divEle.innerHTML + inputEle.value + "<br>"
+
+           // 입력 상자 비우기
+           inputEle.value = "";
+           // 입력 부분에 커서놓기.
+           inputEle.focus();
+
+
+       }
+   </script>
+</head>
+<body>
+<form name="f">
+   입력: <input type="text" name="input"/> <br>
+   출력: <input type="text" name="output"/> <br>
+   <input type="button" value="데이터 옮기기" onclick="textMove()"/>
+</form>
+
+<hr>
+<div id="div">
+
+</div>
+</body>
+</html>
