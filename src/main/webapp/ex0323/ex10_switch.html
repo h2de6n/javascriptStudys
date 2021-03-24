@@ -3,42 +3,85 @@
 <head>
    <meta charset="UTF-8">
    <title>Title</title>
+   <style>
+      div {
+         width: 200px;
+         height: 100px;
+         border: 1px red solid;
+      }
+   </style>
    <script>
        // 연산하기 함수 만들기
        function cal() {
            // 3개의 prompt 받는다.
-           let num1 = parseInt(prompt("숫자1?"));
-           let num2 = parseInt(prompt("숫자2?"));
-           let oper = prompt("연산기호(+,-,*,/)?");
+           // let num1 = parseInt(prompt("숫자1?"));
+           // let num2 = parseInt(prompt("숫자2?"));
+           // let oper = prompt("연산기호(+,-,*,/)?");
 
-           let result = 0;
+           // 강사님 답
+           let no1 = prompt("숫자 1?", 0);
+           let no2 = prompt("숫자 2?", 0);
+           let oper = prompt("연산기호는?(+,-,*,/)", "+");
+
+           // let result = 0;
            // 1. 숫자가 2개가 숫자인지 아닌지 판단한다. - 아니면 다시할래? 묻는다. isNaN() : is Not a Number
+           // if (isNaN(num1) || isNaN(num2)) {
+           //     let again = confirm("다시할래?");
+           //     if (again) cal();
+           //     else return;
+           // }
 
-           if (isNaN(num1) || isNaN(num2)) {
-               let again = confirm("다시할래?");
-               if (again)cal();
-               else return;
+           // 강사님 답
+           if (isNaN(no1) || isNaN(no2)) {
+               alert("숫자만 입력하세요....");
+               confirm("다시할래?") ? cal() : alert("다음에 이용해주세요.");
+           } else {
+               // 연산결과를 출력할 div를 찾는다.(Element를 찾기) - id로 찾기
+               let divEle = document.getElementById("div");
+               // alert(divEle);
+
+               // 찾는 element안에 데이터 넣기
+               // divEle.innerHTML = "<h2>안녕</h2>";
+               // divEle.innerText = "<h2>안녕</h2>";
+               switch (oper) {
+                   case "+":
+                       divEle.innerHTML = `${no1} + ${no2} = ${no1 + no2}`;
+                       break;
+                   case "-":
+                       divEle.innerHTML = `${no1} - ${no2} = ${no1 - no2}`;
+                       break;
+                   case "*":
+                       divEle.innerHTML = `${no1} * ${no2} = ${no1 * no2}`;
+                       break;
+                   case "/":
+                       divEle.innerHTML = `${no1} / ${no2} = ${no1 / no2}`;
+                       break;
+                   default:
+                       alert("연산기호가 잘못되었습니다.");
+                       confirm("다시할래?") ? cal() : alert("다음에 이용해주세요.");
+                       break;
+               }
            }
 
            // 2. 연산기호가 +,-,*,/ 아니면 다시할래? 묻는다.
-           switch (oper) {
-               case '+':
-                   result = num1 + num2;
-                   break;
-               case '-':
-                   result = num1 - num2;
-                   break;
-               case '*':
-                   result = num1 * num2;
-                   break;
-               case '/':
-                   result = num1 / num2;
-                   break;
-               default:
-                   let operAgain = confirm("다시할래?");
-                   if (operAgain) cal();
-                   else return;
-           }
+           // switch (oper) {
+           //     case '+':
+           //         result = num1 + num2;
+           //         break;
+           //     case '-':
+           //         result = num1 - num2;
+           //         break;
+           //     case '*':
+           //         result = num1 * num2;
+           //         break;
+           //     case '/':
+           //         result = num1 / num2;
+           //         break;
+           //     default:
+           //         let operAgain = confirm("다시할래?");
+           //         if (operAgain) cal();
+           //         else return;
+           // }
 
            // 3. 모든게 정상이면 연산기호에 따라 연산해서 그 결과를 출력한다.
 
@@ -49,5 +92,7 @@
 <body>
 <button type="button" onclick="cal()">연산하기</button>
 
+<hr>
+<div id="div"></div>
 </body>
 </html>
