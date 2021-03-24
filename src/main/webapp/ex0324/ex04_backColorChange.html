@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+      // 색상을 배열로 준비한다.
+      let arrColor = ["red", "blue", "green", "pink", "orange"];
+
+      let index = 0;
+      function test() {
+          document.body.style.backgroundColor = arrColor[index++];
+          if(index === arrColor.length) index = 0;
+      }
+      // 준비된 색상을 순서대로 1초마다 바탕색으로 변경한다. (단, 색상이 마지막이되면 다시 처음 색부터 나온다.)
+
+   </script>
+</head>
+<body onload="setInterval(test, 1000)">
+
+</body>
+</html>
