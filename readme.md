@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <title>Title</title>
-   <script>
-       /*
-          시작을 클릭하면
-          현재 시, 분, 초를 구한다.
+<h1> 자바스크립트를 공부하기 위해 만든 저장소입니다.</h1>
 
-          시를 기준으로 AM, PM으로 구분한다.
+**ex0323**은 자바스크립트의 `호이스팅, let, const, ==, ===, 함수, 익명함수, if` 등
+자바스크립트의 기본적인 것들을 공부하였습니다.
 
-          // 시, 분, 초가 한자리인지를 체크해서 1자리이면 앞에 0을 붙혀서 2자리로 출력한다.
-          // 구한 시분초를 text박스에 넣는다. -> 1초마다 반복한다.
-        */
-
-
-       function startTimer() {
-
-           let today = new Date();
-
-           let amPm = (today.getHours() > 12) ? "PM" : "AM";
-           let hours = ((today.getHours() % 12) < 10) ? `0${today.getHours()}` : today.getHours();
-           let min = (today.getMinutes() < 10) ? `0${today.getMinutes()}` : today.getMinutes();
-           let sec = (today.getSeconds() < 10) ? `0${today.getSeconds()}` : today.getSeconds();
-
-           // console.log(amPm);
-           // console.log(hours);
-           // console.log(min);
-           // console.log(sec);
-
-           let times = `${amPm} ${hours} : ${min} : ${sec}`;
-           document.getElementById("time").value = times;
-
-       }
-
-
-       function init() {
-           startTimer();
-           setInterval(startTimer, 1000);
-       }
-
-
-       /*
-          중지를 클릭하면 멈춘다.
-        */
-   </script>
-</head>
-<body>
-<form name="form">
-   <input type="text" id="time">
-   <input type="button" value="시작" onclick="init()">
-   <input type="button" value="중지">
-</form>
-</body>
-</html>
-
+**ex0324**은 자바스크립트의 `setTimeout()`,` setInterval()`, 자바스크립트에서 제공되는
+몇가지 메소드들을 공부했습니다.
