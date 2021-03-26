@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+       function send() {
+           // b.document.getElementById("result").innerHTML = document.f.input.value;
+           // iframe 영역에서 다른 iframe의 문서 영역을 접근할때는 가장 상위 창으로 이동한 후에 접근한다. (top.)
+           top.b.document.getElementById("result").innerHTML += document.f.input.value + "<br>";
+
+           document.f.input.value = "";
+           document.f.input.focus();
+       }
+   </script>
+</head>
+<body>
+<h2>ex08_iframe01.html</h2>
+<a href="ex04_imgZoom.html" target="b">imgZoom</a>
+<p>
+
+<h5 onclick="location.href='ex03_imgObject.html'">페이지변경1</h5>        <!-- 자기자신 창 -->
+<h5 onclick="top.location.href='ex03_imgObject.html'">페이지변경2</h5>    <!-- 전체 창 -->
+<h5 onclick="top.b.location.href='ex03_imgObject.html'">페이지변경3</h5>  <!-- b에 해당하는 iframe 창 -->
+<hr>
+<form action="" name="f">
+   입력 <input type="text" name="input">
+   <input type="button" value="보내기" onclick="send()">
+</form>
+</body>
+</html>
