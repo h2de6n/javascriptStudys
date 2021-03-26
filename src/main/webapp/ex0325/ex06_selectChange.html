@@ -43,7 +43,7 @@
                fr.menu.options[1] = null;
            }
 
-           let arr = (new Function('return' + fr.cal.value))();
+           let arr = (new Function('return ' + fr.cal.value))();
            console.log(arr);
            for (i = 0; i < arr.length; i++) {
                fr.menu.options[fr.menu.length] = new Option(arr[i], arr[i]);  // <option value="징거버거">징거버거</option>

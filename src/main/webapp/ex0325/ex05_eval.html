@@ -12,12 +12,12 @@
        function calCheck(fr) {
            // alert(fr.cal.value);
            // alert(eval(fr.cal.value));
-           fr.result.value = eval(fr.cal.value);
+           fr.result.value = re;
            fr.cal.value = "";
            fr.cal.focus();
        }
 
-       let re = (new Function('return' + fr.cal.value))();
+       let re = (new Function('return ' + fr.cal.value))();
        function text_Eval(fr) {
            for (i = 1; i <= 5; i++) {
                let str = eval("fr.t" + i);
