@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+   <script type="text/javascript">
+     function allCheck(th, fr){
+    	// alert( th.checked )
+    	 
+    	/* if(th.checked){
+    		 for(i=0; i< fr.hobby.length ; i++){
+    			 fr.hobby[i].checked=true;
+    		 }
+    	 }else{
+    		 for(i=0; i< fr.hobby.length ; i++){
+    			 fr.hobby[i].checked=false;
+    		 }
+    	 }*/
+    	 
+    	 for(i=0; i< fr.hobby.length ; i++){
+			 fr.hobby[i].checked = th.checked;
+		 }
+    	 
+    	 //span 글씨 변경하기
+    	 if(th.checked)document.getElementById("span").innerHTML="전체해지";
+    	 else  document.getElementById("span").innerHTML="전체선택";
+    	    	 
+     }
+     
+     function hobbyCheck(fr){
+    	 //hobby가 선택된 value를 가져와서 변수에 누적하고 그결과를 h3영역에 넣는다.
+    	 let str="취미 : " ;
+    	 for(i=0; i< fr.hobby.length ;i++){
+    		 if(fr.hobby[i].checked){
+    			 str += fr.hobby[i].value  +" , ";
+    			 
+    		 }
+    	 }
+    	 
+    	 document.getElementById("result").innerHTML= str;
+     }
+   </script>
+ </head>
+ <body> 
+       
+ <form>
+   <fieldset>
+      <legend>취미선택</legend>
+	  <input type="checkbox" name="all" value="all" onclick="allCheck(this, form)">
+	   <span id="span">전체선택</span>
+	  <p>
+
+	  <input type="checkbox" name="hobby" value="등산">등산
+      <input type="checkbox" name="hobby" value="수영">수영
+	  <input type="checkbox" name="hobby" value="낚시">낚시
+	  <input type="checkbox" name="hobby" value="놀기">놀기
+	  <input type="checkbox" name="hobby" value="먹기">먹기
+
+	  <input type="button" value="클릭" onclick="hobbyCheck(form)">
+
+   </fieldset>
+ </form>
+ 
+ <h3 id="result"></h3>
+  
+ </body>
+</html>

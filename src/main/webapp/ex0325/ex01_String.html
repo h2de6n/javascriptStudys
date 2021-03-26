@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>  </title>
+</head>
+<body>
+<h1>String 객체</h1>
+<h3>
+<script type="text/javascript">
+  let str="abcd abcd abcd";
+  let str2=new String("abcd abcd abcd");
+  
+  document.write(`typeof str : ${typeof str}<br>`);
+  document.write(`typeof str2 : ${typeof str2}<br>`);
+  
+  document.write(`str==str2 : ${str==str2}<br>`);//값만 비교
+  document.write(`str===str2 : ${str===str2}<hr>`); //값과 type 모두를 비교한다.
+  
+  //메소드 사용하기
+  document.write(`str : ${str}<br>`);
+  document.write(`str2 : ${str2}<br>`);
+  
+  //charAt(index) : index에 해당하는 문자를 리턴 ( index는 0부터시작한다.)
+   document.write(`str.charAt(0) : ${str.charAt(0)}<br>`);
+   document.write(`str.charAt(6) : ${str.charAt(6)}<br>`);
+   document.write(`str.charAt(20) : ${str.charAt(20)}<hr>`);//index가 존재하지 않으면 빈공백 출력
+   
+   // indexOf(문자) : 왼쪽에서  부터 주어진 문자를 찾아서 찾으면 존재하는 위치의 index를 리턴한다. 없으면 -1
+   document.write(`str.indexOf("b") : ${str.indexOf("b")}<br>`);
+   document.write(`str.indexOf("f") : ${str.indexOf("f")}<br>`);
+   document.write(`str.indexOf("cd") : ${str.indexOf("cd")}<hr>`);
+   
+   
+   // lastIndexOf(문자) : 오른쪽에서  부터 주어진 문자를 찾아서 찾으면 존재하는 위치의 index를 리턴한다. 없으면 -1
+   document.write(`str.lastIndexOf("b") : ${str.lastIndexOf("b")}<br>`);
+   document.write(`str.lastIndexOf("f") : ${str.lastIndexOf("f")}<br>`);
+   document.write(`str.lastIndexOf("cd") : ${str.lastIndexOf("cd")}<hr>`);
+   
+   document.write(`str.indexOf("b", 3) : ${str.indexOf("b",3)}<br>`);
+   
+   document.write(`str.lastIndexOf("b", 3) : ${str.lastIndexOf("b",3)}<br>`);
+   document.write(`str.lastIndexOf("b", 9) : ${str.lastIndexOf("b",9)}<hr>`);
+   
+   /*
+      문자열 일부분 추출하기
+      1) substring(index1, index2) : index1부터 index2까지 문자열 리턴(index2는 index1보다는 커야한다.)
+      2) slice(index1, index2)  : index1부터 index2까지 문자열 리턴(index2는 index1보다는 커야한다.)
+      
+      3) substr(index1, length) : index1부터 개수(length)만큰 문자열 리턴
+      
+       * 1),2),3) 모두 두번째 인수를 생략하면 index1부터 끝까지 문자열 리턴
+      
+      
+      * ~.length  -> 문자열의 길이 리턴
+   */
+   document.write(`str : ${str}<br>`);
+   document.write(`str.length : ${str.length}<br>`);
+   document.write(`str.substring(0,3) : ${str.substring(0,3)}<br>`);
+   document.write(`str.substring(2,3) : ${str.substring(2,3)}<br>`);
+   document.write(`str.substring(5) : ${str.substring(5)}<br>`);
+   document.write(`str.substring(5,5) : ${str.substring(5,5)}<hr>`);
+   
+   document.write(`str.slice(0,3) : ${str.slice(0,3)}<br>`);
+   document.write(`str.slice(2,3) : ${str.slice(2,3)}<br>`);
+   document.write(`str.slice(5) : ${str.slice(5)}<br>`);
+   document.write(`str.slice(5,5) : ${str.slice(5,5)}<hr>`);
+   
+   document.write(`str.substr(0,3) : ${str.substr(0,3)}<br>`);
+   document.write(`str.substr(2,3) : ${str.substr(2,3)}<br>`);
+   document.write(`str.substr(5) : ${str.substr(5)}<br>`);
+   document.write(`str.substr(5,5) : ${str.substr(5,5)}<hr>`);
+   
+   document.write(`str.substr(0,str.length-1) : ${str.substr(0,str.length-1)}<hr>`);
+   
+   // split(문자) : 문자를 기준으로 분리하기(결과 배열이다)
+   document.write(`str : ${str}<br>`);
+ // let result =  str.split(" ");
+  let result =  str.split("c");
+  document.write(`result : ${result}<br>`);
+  document.write(`result.length : ${result.length}<br>`);
+  document.write(`result[0] : ${result[0]}<br>`);
+  
+  for(i=0; i< result.length ; i++){
+	  document.write("result [ "+ i +" ]  = " + result[i]+"<br>");
+  }
+  
+  
+</script>
+</h3>  
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

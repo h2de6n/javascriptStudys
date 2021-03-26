@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title> New Document </title>
+   <meta name="Generator" content="EditPlus">
+   <meta charset="UTF-8">
+   <meta name="Author" content="">
+   <meta name="Keywords" content="">
+   <meta name="Description" content="">
+
+   <script>
+       function calCheck(fr) {
+           // alert(fr.cal.value);
+           // alert(eval(fr.cal.value));
+           fr.result.value = eval(fr.cal.value);
+           fr.cal.value = "";
+           fr.cal.focus();
+       }
+
+       let re = (new Function('return' + fr.cal.value))();
+       function text_Eval(fr) {
+           for (i = 1; i <= 5; i++) {
+               let str = eval("fr.t" + i);
+               alert(str + ", " + str.value);
+           }
+       }
+   </script>
+</head>
+
+<body>
+<form>
+   식 :<input type="text" name="cal"/>
+   결과 : <input type="text" name="result"/>
+   <input type="button" value="계산하기" onclick="calCheck(form)"/>
+
+   <hr>
+
+   <input type="text" name="t1"/>
+   <input type="text" name="t2"/>
+   <input type="text" name="t3"/>
+   <input type="text" name="t4"/>
+   <input type="text" name="t5"/>
+
+   <input type="button" value="text입력값 가져오기"
+          onclick="text_Eval(form)"/>
+
+
+</form>
+
+</body>
+</html>

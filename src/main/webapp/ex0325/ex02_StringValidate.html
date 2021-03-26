@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>Document</title>
+ <script type="text/javascript">
+    function IdCheck(th){//th는 this 전달된다.
+    	//console.log(th.value)
+    	
+    	
+    	
+    	//영문만 입력 가능한지  체크한다.(대문자만 가능하다.)
+    	let len = th.value.length;
+    	/*for(i=0; i< len ; i++){
+    		//let ch = th.value.charAt(i);
+    		let ch = th.value.toUpperCase().charAt(i);//대소문자 구분안한다.
+    		
+    		//console.log(ch)
+    		if(ch < "A" || ch > "Z"){
+    			document.getElementById("spanId").innerHTML="<b  style='color:red'>"+ch+"는 사용 할수 없습니다.</b>";
+    			th.value="";
+    			th.focus();
+    			return; //함수를 빠져나가라.
+    		}
+    	}*/
+    	
+    	/////////////////////////////////////////////////////////////
+    	//만약, Id에 숫자, 영문, !,@,$ 특수문자 허용한다.
+    	let str="qwertyuiopasdfghjklzxcvbnm0123456789!@$";//허용가능한 문자를 준비한다.
+    	let inputId = th.value.toLowerCase();
+    	console.log(inputId);
+    	
+    	for(i=0; i< len ; i++){
+    		let ch = inputId.charAt(i);
+    		if(str.indexOf(ch)==-1){
+    			document.getElementById("spanId").innerHTML="<b  style='color:red'>"+ch+"는 사용 할수 없다.....</b>";
+    			th.value="";
+    			th.focus();
+    			return; //함수를 빠져나가라.
+    		}
+    		
+    	}
+    	
+    	document.getElementById("spanId").innerHTML="";
+    	
+    }//id체크 끝
+    
+    
+   function ageCheck(th){//th는 this전달
+	   numberCheck(th);
+   
+   }
+    
+    /**
+      숫자 유무 체크해주는 함수
+    */
+    function numberCheck(obj){//obj는 수자유무를 체크할 객체 전달
+    	if(isNaN(obj.value)){ //숫자아니다.
+    		//console.log("숫자만 입력하세요.");
+            console.log( "obj = "+obj.nextSibling);
+            obj.nextSibling.innerHTML="숫자만 입력하세요.";
+    	    obj.value="";
+    	    obj.focus();
+    	    return true;
+    	}else{
+    		obj.nextSibling.innerHTML="";
+    		return false;
+    	}
+    }// 숫자유무체크 끝
+    
+    
+    function emailCheck(th){
+    	//@가 있는지 없는지 체크!!!
+    	if(th.value.indexOf("@")==-1){
+    		th.nextSibling.innerHTML="이메일 형식이 아닙니다.";
+    		th.value="";
+    		th.focus();
+    	}else{
+    		th.nextSibling.innerHTML=""; 
+    	}
+    }
+    
+    
+    function juminCheck(th, fr){ //th는 this, fr는 form 객체 전달
+       //alert(th+"\n"+fr); 
+      
+       //숫자유무체크
+       //입력된 글자의 마지막글자가 숫자인지를 체크해서 아니면 마지막글자를 지운다.
+       let lastCh = th.value.charAt(th.value.length-1);
+       console.log(lastCh);
+       
+        if( isNaN(lastCh) ){
+        	alert("숫자만 입력하세요.");
+        	th.value = th.value.substr(0, th.value.length-1);
+        	th.focus();
+        	return;
+        }
+    
+    
+       //자리수 6자리가 되면 두번째 박스로 커서를 이동한다.
+       if(th.value.length==6){
+    	   //document.f.jumin2.focus();
+    	   fr.jumin2.focus();
+       }
+    }//
+    
+    function genderCheck(th, fr){
+    	//숫자유무체크하자.
+    	if( !numberCheck(th) ){
+    		// 첫글자를 가져와서 성별를 체크한다.
+    		let ch = th.value.charAt(0);
+    		if(ch=="1" || ch=="3")
+        	    fr.gender[0].checked =true;
+    		else if(ch=="2" || ch=="4")
+    			fr.gender[1].checked =true;
+    	}
+    	
+    	
+    	
+    }
+    
+ </script>
+ 
+ 
+ 
+ </head>
+ <body>
+ <form name="f">
+   ID : <input type="text" name="id" onblur="IdCheck(this)"><span id="spanId"></span><p>
+   age : <input type="text" name="age" onblur="ageCheck(this)"><span></span><p>
+   email :<input type="text" name="email" onblur="emailCheck(this)"><span></span><p>
+
+   <fieldset>
+     <legend>주민번호 </legend>
+	 <input type="text" size="6" name="jumin1"  onkeyup="juminCheck(this , form)"> - 
+	 <input type="text" size="7" name="jumin2" onblur="genderCheck(this, form)"><span></span> <p>
+     
+	 성별 : 
+	 <input type="radio" name="gender" value="남자" >남자
+     <input type="radio" name="gender" value="여자">여자
+
+   </fieldset>
+
+
+ </form>
+  
+ </body>
+</html>
