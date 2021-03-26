@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>New Web Project</title>
+   <style type="text/css">
+      tr th {
+         background-color: pink
+      }
+
+      td, th {
+         padding: 3px
+      }
+   </style>
+
+   <script>
+		function idCkOpen() {
+			// console.log(screen.width + ", " + screen.height);
+			// 새창 열기 -> window.open("url", "이름", "속성=value, 속성=value")
+
+			let idv = document.member.id.value;
+			if(idv == "") {
+				alert("아이디를 입력해주세요.");
+				document.member.id.focus();
+				return;
+			}
+			// post방식은 form이 없으면 못넘긴다.
+			myWin = open("ex0326/ex06_idCheck.html?id="+idv, "win", "width=300, height=200"); // get방식으로 전송하는 형태
+			myWin.moveTo(300, 200);
+		}
+
+		function zipCheck() {
+			open("ex0326/ex06_zipCheck.html", "win2", "width=500, height=400");
+		}
+   </script>
+
+</head>
+<body>
+<h1>[ 회원 가입 ]</h1>
+<form name="member">
+   <table>
+      <tr>
+         <th>ID</th>
+         <td>
+            <input type="text" name="id"/>
+            <input type="button" value="IDCheck" onclick="idCkOpen()"/>
+         </td>
+      </tr>
+      <tr>
+         <th>우편번호</th>
+         <td>
+            <input type="text" name="zip1" size="3"/> -
+            <input type="text" name="zip2" size="3"/>
+            <input type="button" value="우편번호검색" onclick="zipCheck()"/>
+         </td>
+      </tr>
+      <tr>
+         <th>주소</th>
+         <td><input type="text" size="30" name="addr"/></td>
+      </tr>
+   </table>
+</form>
+</body>
+</html>
+

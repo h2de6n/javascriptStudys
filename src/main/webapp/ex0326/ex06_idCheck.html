@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>New Web Project</title>
+		
+		<!--
+			전송된 id를 받기 - BackEnd 기술이 필요하다.
+			String id = request.getParameter("id");	// jsp의 servlet 문법이다.
+		 -->
+
+		<script>
+			function idResult() {
+				// id박스에 있는 값을 읽어서 부모창에 보내고..(넣기)
+				opener.document.member.id.value = document.f.id.value;
+
+				// 현재 창 닫기
+				self.close();
+			}
+		</script>
+	</head>
+	<body>
+	<form name="f">
+	  <table>
+	  	<tr>
+	  		<th colspan="2" bgcolor="yellow"> ID 중복 체크 </th>
+	  	</tr>
+	  	<tr>
+	  		<th>ID</th>
+	  		<td>
+	  			<input type="text" name="id" />
+	  			<input type="button" value="사용하기" onclick="idResult()" />
+	  		</td>
+	  	</tr>  	
+	  </table>
+	 </form>	
+	</body>
+</html>
+

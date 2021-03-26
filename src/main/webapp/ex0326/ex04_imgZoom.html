@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title> New Document </title>
+   <meta name="Generator" content="EditPlus">
+   <meta name="Author" content="">
+   <meta name="Keywords" content="">
+   <meta name="Description" content="">
+   <script>
+       let index = 0;
+       function imgSrc(imgName) {
+           document.images[0].src = "ex0326/img/" + imgName;
+       }
+
+       function imgOver(th) { // 여기서 this는 이미지자체이다.
+           th.width *= 2;  // th.width *2;
+           th.height *= 2; // th.height *2;
+       }
+
+       function imgOut(th) {
+           th.width /= 2;  // th.width /2;
+           th.height /= 2; // th.height /2;
+       }
+   </script>
+</head>
+
+<body>
+<img src="ex0326/img/cat.gif"/><br/><br/>
+
+<span onclick="imgSrc('monkey.gif')">[ 원숭이 ]</span> &nbsp;&nbsp;
+<span onclick="imgSrc('tiger.gif')">[ 사자 ]</span> &nbsp;&nbsp;
+<span onclick="imgSrc('cat.gif')">[ 고양이 ]</span> &nbsp;&nbsp;
+<span onclick="imgSrc('dog.gif')">[ 강아지 ]</span> &nbsp;&nbsp;
+
+<hr color="red"/>
+
+<img src="/ex0326/img/monkey.gif" width="70" height="60" onmouseover="imgOver(this)" onmouseout="imgOut(this)"/>&nbsp;&nbsp;
+<img src="/ex0326/img/cat.gif" width="70" height="60" onmouseover="imgOver(this)" onmouseout="imgOut(this)"/>&nbsp;&nbsp;
+<img src="/ex0326/img/dog.gif" width="70" height="60" onmouseover="imgOver(this)" onmouseout="imgOut(this)"/>&nbsp;&nbsp;
+<img src="/ex0326/img/tiger.gif" width="70" height="60" onmouseover="imgOver(this)" onmouseout="imgOut(this)"/>&nbsp;&nbsp;
+
+</body>
+</html>

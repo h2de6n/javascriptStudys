@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <script>
+       let imgName = ["cat", "dog", "monkey", "tiger"];
+       let imgst;
+
+       function imgStart() {
+           let index = 0;
+           imgst = setInterval(() => {
+               // 기능
+               document.images[0].src = "/ex0326/img/" + imgName[index++] + ".gif";
+               if(index == imgName.length) index = 0;
+           }, 800);
+       }
+
+       function imgStop() {
+           clearInterval(imgst);
+       }
+   </script>
+</head>
+<body onload="imgStart()">
+<img src="img/monkey.gif" alt="이미지입니다." onmouseover="imgStop()" onmouseout="imgStart()">
+</body>
+</html>

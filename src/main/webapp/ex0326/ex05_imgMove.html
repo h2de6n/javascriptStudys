@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html onclick="check()" onmousemove="check()">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <style>
+      img {
+         left: 100px;
+         top: 100px;
+         position: absolute;
+      }
+   </style>
+   <script>
+      function check() {
+          // alert(11);
+          // 마우스의 좌표를 구한다.
+          let x = event.clientX;
+          let y = event.clientY;
+
+          document.getElementById("img").style.top = y + "px";
+          document.getElementById("img").style.left = x + "px";
+      }
+   </script>
+</head>
+<body>
+<img src="/ex0326/img/cat.gif" alt="고양이입니다." id="img">
+</body>
+</html>

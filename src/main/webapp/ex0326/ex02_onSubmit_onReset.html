@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>New Document</title>
+   <script>
+      function check(th) {    // th는 this전달되어서 form을 뜻함.
+          alert(1);
+          // 유효성 체크
+          // 1. 입력유무 체크
+          if(th.name.value == "") {
+              alert("이름을 입력해주세요.");
+              th.name.focus();
+              return false;   // submit 버튼인 경우 false를 리턴해서 전송기능을 막는다.
+          }
+
+      }
+
+      // 전송하기 버튼을 클릭했을 때
+      function subCheck(fr) { // fr는 form 객체가 전달됨.
+          //유효성 체크
+          if(fr.name.value == "") {
+              alert("이름 입력해...");
+              fr.name.focus();
+              return;
+          }
+
+          // 폼 action 변경하기
+          fr.action = "http://www.naver.com";
+
+          // 폼을 전송하기
+          fr.submit();  // 전송해라.
+      }
+
+      // reset 버튼 클릭
+      function resetCheck() {
+          alert("지우기 합니다..");
+      }
+   </script>
+</head>
+
+<body>
+<h2>onsubmit 이벤트</h2>
+<!--  -->
+<form name="f" action="http://www.daum.net" method="post" onsubmit="return check(this)" onreset="resetCheck()">  <!-- this인 이유는 자체가 form이여서 -->
+   이름 : <input type="text" name="name"/> <br>
+   아이디 : <input type="text" name="id"/> <br>
+   비번 : <input type="text" name="pwd"/> <br>
+
+   <input type="submit" value="전송" />
+   <input type="reset" value="취소"/>
+   <input type="button" value="전송하기" onclick="subCheck(form)"/>
+   <img src="" onclick="">
+</form>
+
+</body>
+</html>

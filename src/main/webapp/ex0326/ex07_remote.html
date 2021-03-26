@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title> New Document </title>
+   <meta name="Generator" content="EditPlus">
+   <meta name="Author" content="">
+   <meta name="Keywords" content="">
+   <meta name="Description" content="">
+
+   <script>
+       function urlCheck(url) {
+           // alert(url);
+           // 전달받은 url주소로 이동시킨다.
+           // alert(location.href);
+           // alert(opener.location.href); : 부모 주소
+
+           // location.href = "http://www." + url;
+           opener.location.href = "http://www." + url;
+       }
+   </script>
+
+</head>
+
+<body>
+
+<a href="#" onclick="urlCheck('naver.com')">네이버</a>
+<p>
+   <a href="#" onclick="urlCheck('daum.net')">다음</a>
+<p>
+   <a href="#" onclick="urlCheck('google.com')">구글</a>
+<p>
+
+
+</body>
+</html>

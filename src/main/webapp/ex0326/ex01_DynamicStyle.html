@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <style>
+      .span {
+         border: inset 10px blue;
+         background-color: pink;
+         color: white;
+         font-family: "Gill Sans";
+      }
+
+      .a {
+         padding-bottom: 20px;
+         font-style: italic;
+         font-size: 30px;
+
+      }
+   </style>
+   <script>
+       function check(index) {
+           switch (index) {
+               case 1:  // div인경우
+                   document.getElementById("div").style.width = "200px";
+                   document.getElementById("div").style.height = "100px";
+                   document.getElementById("div").style.border = "5px red double";
+                   break;
+               case 2:  //span
+                   document.getElementById("span").className = "span";
+                   // document.getElementById("span").className = "span a";
+                   break;
+
+           }
+       }
+   </script>
+</head>
+<body>
+<h1>동적으로 CSS 적용하기</h1>
+<form action="">
+   <button type="button" onclick="check(1)">div영역</button>
+   <button type="button" onclick="check(2)">span영역</button>
+</form>
+
+<hr>
+<div id="div">div 영역</div>
+
+<hr>
+<span id="span">span 영역</span>
+
+</body>
+</html>

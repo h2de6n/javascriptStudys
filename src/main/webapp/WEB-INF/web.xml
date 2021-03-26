@@ -26,6 +26,15 @@
 <!--        <welcome-file>/ex0324/ex10_Timer.html</welcome-file>-->
 <!--        <welcome-file>/ex0325/ex04_onChange.html</welcome-file>-->
 <!--        <welcome-file>/ex0325/ex05_eval.html</welcome-file>-->
-        <welcome-file>/ex0325/ex06_selectChange.html</welcome-file>
+<!--        <welcome-file>/ex0325/ex06_selectChange.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex01_DynamicStyle.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex02_onSubmit_onReset.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex03_imgObject.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex04_imgChange.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex04_imgZoom.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex05_imgMove.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex06_MemberForm.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex07_main.html</welcome-file>-->
+        <welcome-file>/ex0326/ex08_iframeMain.html</welcome-file>
     </welcome-file-list>
 </web-app>
