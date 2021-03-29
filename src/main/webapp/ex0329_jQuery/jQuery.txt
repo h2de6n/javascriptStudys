@@ -1,0 +1,35 @@
+jQuery 문법
+
+ - $(selector).속성;
+ - $(selector).method();
+
+ * $는 jQuery를 뜻함. $대신 jQuery라고 써도 된다.
+
+    jQuery(selector).속성;
+    jQuery(selector).method();
+
+ * selector란
+    : html의 태그를 찾는 방법
+    : css의 선택자를 모두 사용할 수 있고 그 이상의 선택자를 풍부하게 제공한다.
+
+
+
+
+* 코딩하는 방법
+  <script src="~.js"></script>
+    <script>
+       $(document).ready(function() { // onload랑 같은 개념이다. (즉, 준비가 완료가 되면 이안에서 기능을 쓰세요.)
+           // 기능
+       });
+
+       // 위 jQuery의 기본구조를 간단하게...
+       $(function() {
+
+       });
+    </script>
+
+
+- jquery url 주소
+jquery.com        // 기본
+jqueryui.com      // jquery의 ui
+jquerymobile.com  // 모바일 환경에 적합한 ui를 만들어 놓은 것

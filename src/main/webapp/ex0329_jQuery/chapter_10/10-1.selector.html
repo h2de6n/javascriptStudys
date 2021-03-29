@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
+   <script src="/ex0329_jQuery/js/jquery-3.6.0.min.js"></script>
+   <script>
+      $(document).ready(function () {
+          // jquery문법적용 + javascript문법도 함께 사용가능하다.
+          // alert(1);
+          // $("*").css("color", "red");  // *는 전체 엘리먼트를 말한다.
+          // $("li").css("font-family", "궁서체");
+          // $("h3").css("fontFamily", "궁서체");  // jquery에서는 속성을 하이픈(-)으로 써도되고 카멜표기법으로 써도된다.
+
+          // 하나의 element에 여러개의 속성(css)을 적용하기 - 메소드체인기법
+          // $("h3, h4").css("color", "blue").css("fontFamily", "궁서체").css("border", "5px pink solid").css("backgroundColor", "yellow");
+          // $(".div").css("backgroundColor", "blue");
+          // $("div.div").css("backgroundColor", "pink");
+          // $("#tag").css("textDecoration", "underline");
+          // $("div ol li").css("color", "red");
+          // $("div ol li:eq(0)").css("color", "red");
+          // $("div ol li:eq(2)").css("color", "red");
+          // $("div ol li:gt(2)").css("color", "red");   // 2보다 큰애들.
+          // $("div ol li:lt(2)").css("color", "red");   // 2보다 작은애들.
+          // $("div ol li:not(:lt(2))").css("color", "red");   // 2보다 작은애들 반대
+          $("div ol li:even").css("color", "red");    // 짝수
+          $("div ol li:odd").css("color", "blue");    // 홀수
+      });
+
+   </script>
+
+</head>
+<body>
+
+<h3>jQuery 기본 selector</h3>
+<h4>웹 프로그래밍</h4>
+<div class="div">
+   <ol>
+      <li>jsp</li>
+      <li id="tag">javaScript</li>
+      <li>jQuery</li>
+      <li>Ajax</li>
+   </ol>
+</div>
+
+
+</body>
+</html>
