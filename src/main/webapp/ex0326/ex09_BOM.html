@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+<h3>window 객체</h3>
+<script>
+   for(let key in window) {
+       document.write(key + " : " + window[key] + "<br>");
+   }
+
+   document.write("<hr>");
+   document.write("<h3>location 객체</h3>");
+   for(let key in location) {
+       document.write(key + " : " + location[key] + "<br>");
+   }
+
+   document.write("<hr>");
+   document.write("<h3>history 객체</h3>");
+   for(let key in history) {
+       document.write(key + " : " + history[key] + "<br>");
+   }
+
+   document.write("<hr>");
+   document.write("<h3>screen 객체</h3>");
+   for(let key in screen) {
+       document.write(key + " : " + screen[key] + "<br>");
+   }
+
+   document.write("<hr>");
+   document.write("<h3>navigator 객체</h3>");
+   for(let key in navigator) {
+       document.write(key + " : " + navigator[key] + "<br>");
+   }
+</script>
+
+<a href="#" onclick="location.href='http://www.daum.net'"> 링크1</a>
+<a href="#" onclick="location.replace('http://www.daum.net')">링크2</a>
+</body>
+</html>

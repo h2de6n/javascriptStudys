@@ -35,6 +35,8 @@
 <!--        <welcome-file>/ex0326/ex05_imgMove.html</welcome-file>-->
 <!--        <welcome-file>/ex0326/ex06_MemberForm.html</welcome-file>-->
 <!--        <welcome-file>/ex0326/ex07_main.html</welcome-file>-->
-        <welcome-file>/ex0326/ex08_iframeMain.html</welcome-file>
+<!--        <welcome-file>/ex0326/ex08_iframeMain.html</welcome-file>-->
+<!--        <welcome-file>/ex0326/ex09_BOM.html</welcome-file>-->
+        <welcome-file>/ex0326/ex05_DomAccess.html</welcome-file>
     </welcome-file-list>
 </web-app>
