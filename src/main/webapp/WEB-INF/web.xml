@@ -42,6 +42,7 @@
 <!--        <welcome-file>/ex0329_jQuery/chapter_10/10-1.selector.html</welcome-file>-->
 <!--        <welcome-file>/ex0329_jQuery/chapter_10/10-3.selectorAttr.html</welcome-file>-->
 <!--        <welcome-file>/ex0329_jQuery/chapter_10/10-4.selectorFilterTable.html</welcome-file>-->
-        <welcome-file>/ex0329_jQuery/chapter_10/10-5.focus_blur_Event.html</welcome-file>
+<!--        <welcome-file>/ex0329_jQuery/chapter_10/10-5.focus_blur_Event.html</welcome-file>-->
+        <welcome-file>/ex0329_jQuery/chapter_10/10-6.change_Event.html</welcome-file>
     </welcome-file-list>
 </web-app>

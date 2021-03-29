@@ -12,6 +12,31 @@
                $(this).css({border: "solid red 3px", color: "blue", fontSize: "25px"});
            }).blur(function () {
                $(this).css("border", "solid 1px gray").css("color", "black").css("fontSize", "15px");
+
+               // text 박스의 값을 가져오기 -> document.폼이름.text박스이름.value;
+
+               // jQuery문법으로 text값 가져오기
+               let nameValue = $(this).val();  // val()는 함수이다.
+               // console.log(nameValue);
+
+               // 읽어온 데이터를 div영역에 넣기 -> document.getElementById("result").innerHTML=값
+               // $("#result").html( "<h3>" + nameValue + "</h3>");  // innerHTML와 동일
+               // $("#result").text("<h3>" + nameValue + "</h3>");     // innerText와 동일
+               //
+               // // [중요] this vs $(this) 차이!!
+               // console.log("this : " + this);
+               // console.log("$(this) : " + $(this));
+               //
+               // console.log("this.value : " + this.value);
+               // console.log("$(this).val() : " + $(this).val());
+
+               this.style.color = "red";
+
+               // text박스 지우기
+               $(this).val("");
+
+               // div에 데이터누적하기
+               $("#result").html( $("#result").html() + "<h3>" + nameValue + "</h3>");
            });
        })
 
@@ -24,6 +49,8 @@
    이름 : <input type="text" name="name">
 </form>
 
+<hr>
+<div id="result"></div>
 </body>
 </html>
 
