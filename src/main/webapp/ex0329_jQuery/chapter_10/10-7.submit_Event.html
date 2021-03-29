@@ -1,25 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
 
-<script src="../lib/jquery-1.9.1.min.js"></script>
+   <script src="/ex0329_jQuery/js/jquery-3.6.0.min.js"></script>
 
-<script>
-	
-	
-</script>
+   <script>
+       $(function () {
+           // submit을 클릭했을때 값 입력유무 체크하고 없으면 이동을 막고, 있으면 이동한다.
+           $("#form").submit(function () {
+               if($("#id").val() == "") {
+                   alert("아이디를 입력해주세요.");
+                   $("#id").focus();
+                   return false; // 전송막음.
+               }
+
+               if($("#pwd").val() == "") {
+                   alert("비밀번호를 입력해주세요.");
+                   $("#pwd").focus();
+                   return false;
+               }
+           });
+
+       });
+
+   </script>
 </head>
 <body>
 <h1>submit 이벤트</h1>
 
 <form id="form" action="http://www.daum.net">
-    아이디 : <input type="text" id="id" name="id"/> <br>
-   비밀번호 : <input type="text" id="pwd" name="pwd"/> <br>
+   아이디 : <input type="text" id="id" name="id"/> <br>
+   비밀번호 : <input type="password" id="pwd" name="pwd"/> <br>
    <input type="submit" value="로그인"/>
-    <input type="reset" value="취소"/>
- </form>	
+   <input type="reset" value="취소"/>
+</form>
 
 </body>
 </html>
