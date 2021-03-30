@@ -53,6 +53,7 @@
 <!--        <welcome-file>/ex0330_jQuery/chapter_11/11-9.dom_Attr_3.html</welcome-file>-->
 <!--        <welcome-file>/ex0330_jQuery/chapter_11/11-15.addClass_removeClass.html</welcome-file>-->
 <!--        <welcome-file>/ex0330_jQuery/chapter_11/11-16.toggleClass_1.html</welcome-file>-->
-        <welcome-file>/ex0330_jQuery/chapter_12/12-1.show_hide_toggle.html</welcome-file>
+<!--        <welcome-file>/ex0330_jQuery/chapter_12/12-1.show_hide_toggle.html</welcome-file>-->
+        <welcome-file>/ex0330_jQuery/chapter_12/12-2.fadeIn_fadeOut_fadeToggle.html</welcome-file>
     </welcome-file-list>
 </web-app>

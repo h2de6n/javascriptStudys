@@ -10,7 +10,22 @@
    </style>
    <script src="/js/jquery-3.6.0.min.js"></script>
    <script>
+       $(function () {
+           $("#show").click(function () {
+               // $("img").show();
+               $("img").show(4000, function () {
+                   $(this).css({border: "5px red double"});
+               });
+           });
 
+           $("#hide").click(function () {
+               $("img").hide(1000);
+           });
+
+           $("#toggle").click(function () {
+               $("img").toggle();
+           });
+       });
    </script>
 </head>
 <body>
