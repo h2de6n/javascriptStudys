@@ -15,15 +15,22 @@
    <script>
        $(function () {
            $("ul>li").click(function () {
-               if ($(this).text() == "로그인하기") {
-                   $("#login").slideDown(1000, function () {   // 콜백함수
+               // if ($(this).text() == "로그인하기") {
+               //     $("#login").slideDown(1000, function () {   // 콜백함수
+               //         $("ul>li").text("로그인취소");
+               //     });
+               // } else {
+               //     $("#login").slideUp(1000, function () {     // 콜백함수
+               //         $("ul>li").text("로그인하기");
+               //     });
+               // }
+               $("#login").slideToggle(1000, function () {
+                   if ($("ul>li").text() == "로그인하기") {
                        $("ul>li").text("로그인취소");
-                   });
-               } else {
-                   $("#login").slideUp(1000, function () {     // 콜백함수
+                   } else {
                        $("ul>li").text("로그인하기");
-                   });
-               }
+                   }
+               });
            });
        });
    </script>
