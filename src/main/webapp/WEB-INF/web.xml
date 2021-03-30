@@ -54,6 +54,8 @@
 <!--        <welcome-file>/ex0330_jQuery/chapter_11/11-15.addClass_removeClass.html</welcome-file>-->
 <!--        <welcome-file>/ex0330_jQuery/chapter_11/11-16.toggleClass_1.html</welcome-file>-->
 <!--        <welcome-file>/ex0330_jQuery/chapter_12/12-1.show_hide_toggle.html</welcome-file>-->
-        <welcome-file>/ex0330_jQuery/chapter_12/12-2.fadeIn_fadeOut_fadeToggle.html</welcome-file>
+<!--        <welcome-file>/ex0330_jQuery/chapter_12/12-2.fadeIn_fadeOut_fadeToggle.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_12/12-4.fadeIn_fadeOut_Navigation.html</welcome-file>-->
+        <welcome-file>/ex0330_jQuery/chapter_12/12-5.slideDown_slideUp.html</welcome-file>
     </welcome-file-list>
 </web-app>
