@@ -1,25 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style>
-	img{width:50px;height:40px}
-</style>
- <script src="../lib/jquery-1.11.1.min.js"></script>
- 
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
+   <style>
+      img {
+         width: 50px;
+         height: 40px;
+      }
+   </style>
+   <script src="/js/jquery-3.6.0.min.js"></script>
+
+   <script>
+       $(document).ready(function () {
+           let color = ["red", "green", "blue", "skyblue"];
+
+           $("h3").each(function (index, item) {
+               $(this).css("backgroundColor", color[index]);
+           });
+
+           let img = "<img src='/ex0330_jQuery/chapter_11/img/jquery.jpg'>";
+           $("#prepend").click(function () {
+               $(".a").prepend(img);   // h3의 하위(자식) 노드로 앞에 추가된다. (중요)
+           });
+           $("#append").click(function () {
+               $(".b").append(img);    // h3의 하위(자식) 노드로 뒤에 추가된다. (중요)
+           });
+           $("#after").click(function () {
+               $(".c").after(img);     // h3의 형제 노드로 뒤에 추가된다. (중요)
+           });
+           $("#before").click(function () {
+               $(".d").before(img);    // h3의 형제 노드로 앞에 추가된다. (중요)
+           });
+       });
+
+       // DOM 조작에서 주로 하는 게 추가, 삭제, 수정이다.
+   </script>
 
 </head>
 <body>
-	<input type="button" id="pre" value="prepend"/>
-	<input type="button" id="app" value="append"/>
-	
-    <input type="button" id="preTo" value="prependTo"/>
-	<input type="button" id="appTo" value="appendTo"/>
-	
-	<h3 class="a">prepend 영역</h3>
-	<h3 class="b">append 영역</h3>
-	<h3 class="c">prependTo 영역</h3>
-	<h3 class="d">appendTo 영역</h3>
+<h1>DOM 조작 - Element ADD </h1>
+<input type="button" id="prepend" value="prepend"/>
+<input type="button" id="append" value="append"/>
+
+<input type="button" id="after" value="after"/>
+<input type="button" id="before" value="before"/>
+
+<h3 class="a">prepend 영역</h3>
+<h3 class="b">append 영역</h3>
+<h3 class="c">after 영역</h3>
+<h3 class="d">before 영역</h3>
 </body>
 </html>
