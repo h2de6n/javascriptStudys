@@ -1,21 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style>
-	.hidden{display:none;}
-	
-</style>
-<script src="../lib/jquery-1.9.1.min.js"></script>
-<script>
-	
-</script>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
+   <style>
+      .hidden {
+         display: none;
+      }
+
+   </style>
+   <script src="/js/jquery-3.6.0.min.js"></script>
+   <script>
+       $(function () {
+           $("#btn").click(function () {
+               $("#myLayer").toggleClass("hidden"); // 한번은 적용하고 해제하고가 반전되는 것이다.
+           });
+       });
+   </script>
 </head>
 <body>
 <h1>toggleClass 실습</h1>
-	<input type="button" value="클릭하세요." id="btn"> </p>
-	<img src="img/jpup_id.jpg" id="myLayer"/>
-    
+<input type="button" value="클릭하세요." id="btn"> </p>
+<img src="/ex0330_jQuery/chapter_11/img/jpup_id.jpg" id="myLayer"/>
+
 </body>
 </html>

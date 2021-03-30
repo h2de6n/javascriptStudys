@@ -1,21 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style>
-	div#bigImage{border:1px solid red;width:200px;height:200px;}
-</style>
-<script src="../lib/jquery-1.9.1.min.js"></script>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
+   <style>
+      div#bigImage {
+         border: 1px solid red;
+         width: 200px;
+         height: 200px;
+      }
+   </style>
+   <script src="/js/jquery-3.6.0.min.js"></script>
+   <script>
+       $(function () {
+           // $().attr().attr();    -> $().css().css();
+           $("img").attr({width: 80, height: 80});   // -> $().css({속성: value});
+
+
+           // 이벤트등록
+           $("div>img").mouseover(function () {
+               let imgSrc = $(this).attr("src");
+
+               // div 영역의 width, height 가져온다.
+               let w = $("#bigImage").css("width");
+               let h = $("#bigImage").css("height");
+
+               let img = `<img src='${imgSrc}' width='${w}' height='${h}'>`;
+
+               // div 영역 제거
+               $("#bigImage").empty();
+               $("#bigImage").append(img);
+           });
+       });
+   </script>
 </head>
 <body>
-	
+
 <div id="product">
-    <img src="img/android.jpg" />
-    <img src="img/spring.jpg" />
-    <img src="img/unity.jpg" />  
-	  
-    <div id="bigImage"> </div>
+   <img src="/ex0330_jQuery/chapter_11/img/android.jpg"/>
+   <img src="/ex0330_jQuery/chapter_11/img/spring.jpg"/>
+   <img src="/ex0330_jQuery/chapter_11/img/unity.jpg"/>
+
+   <div id="bigImage"></div>
 </div>
 </body>
 </html>

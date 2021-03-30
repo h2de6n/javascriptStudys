@@ -46,6 +46,13 @@
 <!--        <welcome-file>/ex0329_jQuery/chapter_10/10-6.change_Event.html</welcome-file>-->
 <!--        <welcome-file>/ex0329_jQuery/chapter_10/10-7.submit_Event.html</welcome-file>-->
 <!--        <welcome-file>/ex0329_jQuery/chapter_10/10-12.trigger__Event.html</welcome-file>-->
-        <welcome-file>/ex0329_jQuery/chapter_10/10-14.each_2.html</welcome-file>
+<!--        <welcome-file>/ex0329_jQuery/chapter_10/10-14.each_2.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_11/11-3.append_prepend.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_11/11-5.remove_empty.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_11/11-7.dom_Attr_1.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_11/11-9.dom_Attr_3.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_11/11-15.addClass_removeClass.html</welcome-file>-->
+<!--        <welcome-file>/ex0330_jQuery/chapter_11/11-16.toggleClass_1.html</welcome-file>-->
+        <welcome-file>/ex0330_jQuery/chapter_12/12-1.show_hide_toggle.html</welcome-file>
     </welcome-file-list>
 </web-app>
