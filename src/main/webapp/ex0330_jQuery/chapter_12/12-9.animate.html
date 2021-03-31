@@ -1,21 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Insert title here</title>
 
-<script src="../lib/jquery-1.9.1.min.js"></script>
-<script>
-	
-</script>
+   <script src="/js/jquery-3.6.0.min.js"></script>
+   <script>
+       $(function () {
+           $("#moveRight").click(function () {
+               $("img").animate({
+                   marginLeft: "+=300px",
+                   width: "+=150px",
+                   height: "+=150px"
+               }, 1000, function () {
+                   $(this).css({border: "5px groove orange"});
+               });
+               $("img").animate({
+                   marginTop: "+=300px",
+                   width: "+=150px",
+                   height: "+=150px"
+               }, 1000);
+           });
+
+           $("#moveLeft").click(function () {
+               $("img").animate({
+                   marginLeft: "-=300px",
+                   width: "-=150px",
+                   height: "-=150px"
+               }, 1000);
+               $("img").animate({
+                   marginTop: "-=300px",
+                   width: "-=150px",
+                   height: "-=150px"
+               }, 1000);
+           });
+       });
+   </script>
 </head>
 <body>
 
 <h1>animate 효과</h1>
-   <input type="button" value="moveRight" id="moveRight" />
-	<input type="button" value="moveLeft"  id="moveLeft"/>
-	<p/>
-	<img src="img/heart.png" width="50" height="50"/>
+<input type="button" value="moveRight" id="moveRight"/>
+<input type="button" value="moveLeft" id="moveLeft"/>
+<p/>
+<img src="/ex0330_jQuery/chapter_12/img/heart.png" width="50" height="50"/>
 </body>
 
 </html>
